@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Press Start 2P', cursive; 
+    font-size: small;
+    background-color: #1c1c1c; 
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    width: 300px;
+}
+
+
+.form_content > div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="submit"]{
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #666; 
+    background-color: #333; 
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #0f4985; 
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.radio-group{
+    font-size:small;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #666;
+    background-color: #333;
+    margin-right: 8px;
+    outline: none;
+}
+
+.radio-group label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px; 
+    cursor: pointer;
+    pointer-events: none;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    background: #666;
+}
