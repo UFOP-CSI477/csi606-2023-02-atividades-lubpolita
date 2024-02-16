@@ -17,16 +17,18 @@ As configurações de conexão com o banco de dados podem ser alteradas facilmen
    docker run --name postgres -e POSTGRES_PASSWORD=12345 -p 5433:5433 -d postgres
    ```
 
-2. Rode as migrations
-   ```sh
-   npm run typeorm migration:run
-   ```
 
 2. Instale as dependências
    ```sh
    npm install
    ```
-   
+
+3. Rode as migrations
+   ```sh
+   npm run typeorm migration:run
+   ```
+
+
 3. Inicie a API
    ```sh
    npm run dev
