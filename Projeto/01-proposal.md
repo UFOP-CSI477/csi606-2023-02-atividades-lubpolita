@@ -1,35 +1,47 @@
-# **CSI606-2021-02 - Remoto - Proposta de Trabalho Final**
+# Elaboração da Proposta e Análise: Modelagem e Protótipos
 
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## 1. Introdução
 
---------------
+A proposta é desenvolver uma aplicação web para organizar tarefas em um formato de quadro Kanban, composto por quatro colunas principais: Backlog, Em Processo, Revisão de Código e Concluído. O objetivo é proporcionar uma interface intuitiva e eficiente para gerenciar o fluxo de trabalho de projetos.
 
-<!-- Descrever um resumo sobre o trabalho. -->
+## 2. Objetivos
 
-### Resumo
+- Desenvolver uma aplicação web de fácil utilização.
+- Permitir o cadastro e a organização de tarefas em quatro colunas distintas.
+- Facilitar a visualização do progresso das tarefas em cada etapa do processo.
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+## 3. Funcionalidades Principais
 
-<!-- Apresentar o tema. -->
-### 1. Tema
+- Cadastro de novas tarefas.
+- Edição e exclusão de tarefas.
 
-  O trabalho final tem como tema o desenvolvimento de ...
+## 4. Tecnologias Utilizadas
 
-<!-- Descrever e limitar o escopo da aplicação. -->
-### 2. Escopo
+- Frontend: ReactJS
+- Backend: Node.js, Express.js, Postgres.
 
-  Este projeto terá as seguintes funcionalidades...
+## 5. Fluxo de Funcionamento
 
-<!-- Apresentar restrições de funcionalidades e de escopo. -->
-### 3. Restrições
+1. O usuário acessa a aplicação por meio de um navegador web.
+2. Na página inicial, será apresentado o quadro Kanban com as quatro colunas.
+3. O usuário poderá clicar em "Adicionar Tarefa" para inserir uma nova tarefa.
+4. Ao criar uma nova tarefa, o usuário poderá fornecer informações, como título e descrição.
+5. As tarefas serão exibidas como cartões dentro de suas respectivas colunas.
+6. Cada tarefa possui um botão de editar e excluir.
+7. As alterações serão salvas no banco de dados.
 
-  Neste trabalho não serão considerados ...
+## 6. Protótipo
 
-<!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
-### 4. Protótipo
+O protótipo mostra a tela principal com os botões que dão acesso às funcionalidades principais do sistema.
 
-  Protótipos para as páginas (descrever quais páginas) foram elaborados, e podem ser encontrados em...
+![Protótipo](figma.png)
 
-### 5. Referências
+## 7. Como Rodar o Projeto? 
 
-  Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT.
+Acesse as pastas "backend" e "frontend" respectivamente e siga as instruções dos arquivos README.md.
+
+## Conclusão
+
+A proposta de desenvolvimento de uma aplicação web para organização de tarefas em um quadro Kanban apresenta-se como uma solução eficaz para otimizar o fluxo de trabalho de projetos. Com a utilização de tecnologias modernas espera-se oferecer uma ferramenta fácil e intuitiva para gerenciamento de tarefas.
+
+

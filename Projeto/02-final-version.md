@@ -1,29 +1,41 @@
 # **CSI606-2021-02 - Remoto - Trabalho Final - Resultados**
 
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Luiza Borges Polita*
 
 --------------
 
-<!-- Este documento tem como objetivo apresentar o projeto desenvolvido, considerando o que foi definido na proposta e o produto final. -->
-
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+Este documento apresenta os resultados do projeto desenvolvido, conforme descrito na proposta inicial. O projeto consiste em uma aplicação web para organização de tarefas em um formato de quadro Kanban, com o objetivo de facilitar o gerenciamento do fluxo de trabalho em projetos.
 
 ### 1. Funcionalidades implementadas
-<!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
-  
+
+- Desenvolvimento de uma aplicação web utilizando ReactJS para o frontend e Node.js com Express.js e Postgres para o backend.
+- Cadastro de novas tarefas.
+- Edição e exclusão de tarefas.
+- Visualização do quadro Kanban com as quatro colunas: Backlog, Em Processo, Revisão de Código e Concluído.
+- Exibição das tarefas como cartões dentro de suas respectivas colunas.
+- Persistência das alterações no banco de dados.
+
 ### 2. Funcionalidades previstas e não implementadas
-<!-- Descrever as funcionalidades que eram previstas e não foram implementas, apresentando uma breve justificativa do porquê elas não foram incluídas -->
+
+Não houve funcionalidades previstas que não tenham sido implementadas neste momento.
 
 ### 3. Outras funcionalidades implementadas
-<!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
+
+Não foram implementadas outras funcionalidades além das previstas.
 
 ### 4. Principais desafios e dificuldades
-<!-- Descrever os principais desafios encontrados no desenvolvimento do trabalho, quais foram as dificuldades e como elas foram superadas e resolvidas. -->
+
+- Integração entre o frontend e o backend, garantindo a comunicação adequada entre as partes.
+- Implementação da lógica de atualização do quadro Kanban em tempo real, garantindo uma experiência fluída para o usuário.
+- Gerenciamento de estado da aplicação de forma eficiente para garantir a consistência dos dados.
 
 ### 5. Instruções para instalação e execução
-<!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
 
-### 6. Referências
-<!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
+Para rodar o projeto, siga as instruções abaixo:
+
+1. Clone o repositório do projeto.
+2. Navegue até as pastas "backend" e "frontend" e siga as instruções dos arquivos README.md para configurar e executar cada parte do projeto.
+3. Certifique-se de ter o Node.js e o PostgreSQL instalados em seu sistema.
+
