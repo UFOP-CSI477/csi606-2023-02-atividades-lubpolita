@@ -14,4 +14,6 @@ locaisColetaRoutes.post('/update/:id', locaisColetaController.update);
 
 locaisColetaRoutes.get('/:id', locaisColetaController.findById);
 
+locaisColetaRoutes.get('/name', locaisColetaController.findByName);
+
 export default locaisColetaRoutes;

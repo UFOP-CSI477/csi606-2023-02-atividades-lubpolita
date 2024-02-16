@@ -3,7 +3,6 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
-  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { LocaisColeta } from './LocaisColeta';
@@ -17,9 +16,16 @@ export class Doacoes {
   @Column()
   pessoa_id: string;
 
+  @ManyToOne(() => Pessoas)
+  @JoinColumn({ name: 'pessoa_id' })
+  pessoa: Pessoas;
+
+  @Column()
+  local_id: string;
+
   @ManyToOne(() => LocaisColeta)
   @JoinColumn({ name: 'local_id' })
-  local_id: LocaisColeta;
+  local: LocaisColeta;
 
   @Column()
   data: string;
@@ -29,7 +35,4 @@ export class Doacoes {
 
   @Column()
   update_at: string;
-
-  @OneToMany(() => Pessoas, pessoa => pessoa.cidade_id)
-  pessoas: Pessoas[];
 }

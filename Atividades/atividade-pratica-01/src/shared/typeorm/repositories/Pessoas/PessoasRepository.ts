@@ -33,9 +33,15 @@ export default class PessoasRepository implements IPessoasRepository {
   }
 
   public async findByName(name: string): Promise<Pessoas[] | undefined> {
-    const pessoas = await this.ormRepository.find({
-      where: { nome: name },
-    });
+    const todasPessoas = await this.ormRepository.find();
+    const pessoas: Pessoas[] = [];
+
+    for (const pessoa of todasPessoas) {
+      if (pessoa.nome.includes(name)) {
+        pessoas.push(pessoa);
+      }
+    }
+
     return pessoas;
   }
 

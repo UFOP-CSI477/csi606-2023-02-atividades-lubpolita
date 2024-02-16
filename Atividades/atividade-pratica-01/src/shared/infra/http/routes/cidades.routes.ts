@@ -14,6 +14,6 @@ cidadesRoutes.post('/update/:id', cidadesController.update);
 
 cidadesRoutes.get('/:id', cidadesController.findById);
 
-cidadesRoutes.get('/:name', cidadesController.findByName);
+cidadesRoutes.get('/name', cidadesController.findByName);
 
 export default cidadesRoutes;

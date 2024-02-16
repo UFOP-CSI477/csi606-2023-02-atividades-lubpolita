@@ -5,6 +5,7 @@ import CreateCidadesService from '../services/Cidades/CreateService';
 import DeleteCidadesService from '../services/Cidades/DeleteService';
 import FindAllCidadesService from '../services/Cidades/FindAllService';
 import FindByIdService from '../services/Cidades/FindByIdService';
+import FindByNameService from '../services/Cidades/FindByNameService';
 import UpdateCidadesService from '../services/Cidades/UpdateService';
 
 export class CidadesController {
@@ -45,8 +46,8 @@ export class CidadesController {
     response: Response,
   ): Promise<Response | undefined> {
     try {
-      const find = container.resolve(FindByIdService);
-      const { name } = request.params;
+      const find = container.resolve(FindByNameService);
+      const { name } = request.body;
       const task = await find.execute(name);
       console.dir(task);
       return response.status(201).json(task);

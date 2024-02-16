@@ -26,9 +26,12 @@ export class LocaisColeta {
   @Column()
   complemento: string;
 
+  @Column()
+  cidade_id: string;
+
   @ManyToOne(() => Cidades)
   @JoinColumn({ name: 'cidade_id' })
-  cidade_id: Cidades;
+  cidade: Cidades;
 
   @Column()
   create_at: string;

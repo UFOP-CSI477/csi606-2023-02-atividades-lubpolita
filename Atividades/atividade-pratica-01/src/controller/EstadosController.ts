@@ -5,6 +5,7 @@ import CreateEstadosService from '../services/Estados/CreateService';
 import DeleteEstadosService from '../services/Estados/DeleteService';
 import FindAllEstadosService from '../services/Estados/FindAllService';
 import FindByIdService from '../services/Estados/FindByIdService';
+import FindByNameService from '../services/Estados/FindByNameService';
 import UpdateEstadosService from '../services/Estados/UpdateService';
 
 export class EstadosController {
@@ -44,8 +45,8 @@ export class EstadosController {
     response: Response,
   ): Promise<Response | undefined> {
     try {
-      const find = container.resolve(FindByIdService);
-      const { name } = request.params;
+      const find = container.resolve(FindByNameService);
+      const { name } = request.body;
       const task = await find.execute(name);
       console.dir(task);
       return response.status(201).json(task);

@@ -7,4 +7,5 @@ export interface ILocaisColetaRepository {
   update: (data: LocaisColeta) => Promise<LocaisColeta>;
   delete(id: string): Promise<void>;
   findAll: () => Promise<LocaisColeta[] | undefined>;
+  findByName: (name: string) => Promise<LocaisColeta[] | undefined>;
 }

@@ -12,8 +12,8 @@ pessoasRoutes.delete('/delete/:id', pessoasController.delete);
 
 pessoasRoutes.post('/update/:id', pessoasController.update);
 
-pessoasRoutes.get('/:id', pessoasController.findById);
+pessoasRoutes.get('/find/:id', pessoasController.findById);
 
-pessoasRoutes.get('/:name', pessoasController.findByName);
+pessoasRoutes.get('/name', pessoasController.findByName);
 
 export default pessoasRoutes;

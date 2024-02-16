@@ -17,23 +17,30 @@ export default class LocaisColetaRepository implements ILocaisColetaRepository {
   }
 
   public async create(data: ICreateLocaisColetaDTO): Promise<LocaisColeta> {
-    const doacoes = this.ormRepository.create(data);
-    await this.ormRepository.save(doacoes);
-    return doacoes;
+    const locaisColeta = this.ormRepository.create(data);
+    await this.ormRepository.save(locaisColeta);
+    return locaisColeta;
   }
 
   public async findById(id: string): Promise<LocaisColeta | undefined> {
-    const doacoes = await this.ormRepository.findOne({ where: { id } });
-    return doacoes;
+    const locaisColeta = await this.ormRepository.findOne({ where: { id } });
+    return locaisColeta;
+  }
+
+  public async findByName(name: string): Promise<LocaisColeta[] | undefined> {
+    const locaisColeta = await this.ormRepository.find({
+      where: { nome: name },
+    });
+    return locaisColeta;
   }
 
   public async findAll(): Promise<LocaisColeta[] | undefined> {
-    const doacoes = await this.ormRepository.find();
-    return doacoes;
+    const locaisColeta = await this.ormRepository.find();
+    return locaisColeta;
   }
 
   public async update(data: LocaisColeta): Promise<LocaisColeta> {
-    const doacoes = await this.ormRepository.save(data);
-    return doacoes;
+    const locaisColeta = await this.ormRepository.save(data);
+    return locaisColeta;
   }
 }

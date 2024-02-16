@@ -30,13 +30,19 @@ export class Pessoas {
   @Column()
   rg: string;
 
+  @Column()
+  cidade_id: string;
+
   @ManyToOne(() => Cidades)
   @JoinColumn({ name: 'cidade_id' })
-  cidade_id: Cidades;
+  cidade: Cidades;
+
+  @Column()
+  tipo_id: string;
 
   @ManyToOne(() => TiposSanguineos)
   @JoinColumn({ name: 'tipo_id' })
-  tipo_id: TiposSanguineos;
+  tipo: TiposSanguineos;
 
   @Column()
   create_at: string;

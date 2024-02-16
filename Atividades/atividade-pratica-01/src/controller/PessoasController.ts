@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import 'reflect-metadata';
 import { container } from 'tsyringe';
+import FindByNameService from '../services/Cidades/FindByNameService';
 import CreatePessoasService from '../services/Pessoas/CreateService';
 import DeletePessoasService from '../services/Pessoas/DeleteService';
 import FindAllPessoasService from '../services/Pessoas/FindAllService';
@@ -44,8 +45,9 @@ export class PessoasController {
     response: Response,
   ): Promise<Response | undefined> {
     try {
-      const find = container.resolve(FindByIdService);
-      const { name } = request.params;
+      const find = container.resolve(FindByNameService);
+      const { name } = request.body;
+      console.dir(name);
       const task = await find.execute(name);
       console.dir(task);
       return response.status(201).json(task);

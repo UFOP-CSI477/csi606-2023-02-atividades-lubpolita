@@ -18,9 +18,12 @@ export class Cidades {
   @Column()
   nome: string;
 
+  @Column()
+  estado_id: string;
+
   @ManyToOne(() => Estados)
   @JoinColumn({ name: 'estado_id' })
-  estado_id: Estados;
+  estado: Estados;
 
   @Column()
   create_at: string;

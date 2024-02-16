@@ -5,6 +5,7 @@ import CreateLocaisColetaService from '../services/LocaisColeta/CreateService';
 import DeleteLocaisColetaService from '../services/LocaisColeta/DeleteService';
 import FindAllLocaisColetaService from '../services/LocaisColeta/FindAllService';
 import FindByIdService from '../services/LocaisColeta/FindByIdService';
+import FindByNameService from '../services/LocaisColeta/FindByNameService';
 import UpdateLocaisColetaService from '../services/LocaisColeta/UpdateService';
 
 export class LocaisColetaController {
@@ -30,6 +31,23 @@ export class LocaisColetaController {
       const find = container.resolve(FindByIdService);
       const { id } = request.params;
       const task = await find.execute(id);
+      console.dir(task);
+      return response.status(201).json(task);
+    } catch (err) {
+      return response.status(400).json({
+        message: err.message,
+      });
+    }
+  }
+
+  public async findByName(
+    request: Request,
+    response: Response,
+  ): Promise<Response | undefined> {
+    try {
+      const find = container.resolve(FindByNameService);
+      const { name } = request.body;
+      const task = await find.execute(name);
       console.dir(task);
       return response.status(201).json(task);
     } catch (err) {

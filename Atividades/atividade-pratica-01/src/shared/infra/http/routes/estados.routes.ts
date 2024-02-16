@@ -14,6 +14,6 @@ estadosRoutes.post('/update/:id', estadosController.update);
 
 estadosRoutes.get('/:id', estadosController.findById);
 
-estadosRoutes.get('/:name', estadosController.findByName);
+estadosRoutes.get('/name', estadosController.findByName);
 
 export default estadosRoutes;
