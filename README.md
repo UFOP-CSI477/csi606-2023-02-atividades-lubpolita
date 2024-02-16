@@ -3,12 +3,12 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Luiza Borges Polita
+- Matrícula: 18.1.8169
+- Curso: Sistemas Web I
+- Semestre/Ano correntes: 2024
+- Link para o seu GitHub: https://github.com/lubpolita
 
 ## [Projeto final:](./Projeto/README.md)
 
-Apresente uma breve descrição do seu projeto.
+O projeto consiste no desenvolvimento de uma aplicação web para organização de tarefas utilizando o método Kanban. Ele oferece uma interface intuitiva para gerenciar o fluxo de trabalho de projetos, permitindo o cadastro, edição e exclusão de tarefas em quatro colunas principais: Backlog, Em Processo, Revisão de Código e Concluído. A aplicação foi implementada utilizando tecnologias modernas como ReactJS para o frontend e Node.js com Express.js e PostgreSQL para o backend, visando proporcionar uma ferramenta fácil e eficiente para o gerenciamento de projetos.
