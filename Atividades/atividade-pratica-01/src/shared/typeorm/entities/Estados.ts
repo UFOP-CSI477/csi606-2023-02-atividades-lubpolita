@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Cidades } from './Cidades';
 
 @Entity('Estados')
 export class Estados {
@@ -16,4 +17,7 @@ export class Estados {
 
   @Column()
   update_at: string;
+
+  @OneToMany(() => Cidades, cidade => cidade.estado_id)
+  doacoes: Cidades[];
 }

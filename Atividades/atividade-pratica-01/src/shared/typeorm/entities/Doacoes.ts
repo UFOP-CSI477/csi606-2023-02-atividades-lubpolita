@@ -1,4 +1,13 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { LocaisColeta } from './LocaisColeta';
+import { Pessoas } from './Pessoas';
 
 @Entity('Doacoes')
 export class Doacoes {
@@ -8,8 +17,9 @@ export class Doacoes {
   @Column()
   pessoa_id: string;
 
-  @Column()
-  local_id: string;
+  @ManyToOne(() => LocaisColeta)
+  @JoinColumn({ name: 'local_id' })
+  local_id: LocaisColeta;
 
   @Column()
   data: string;
@@ -19,4 +29,7 @@ export class Doacoes {
 
   @Column()
   update_at: string;
+
+  @OneToMany(() => Pessoas, pessoa => pessoa.cidade_id)
+  pessoas: Pessoas[];
 }

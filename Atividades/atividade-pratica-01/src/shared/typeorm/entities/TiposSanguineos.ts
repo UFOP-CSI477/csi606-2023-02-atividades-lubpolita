@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Pessoas } from './Pessoas';
 
 @Entity('TipoSanguineo')
 export class TiposSanguineos {
@@ -16,4 +17,7 @@ export class TiposSanguineos {
 
   @Column()
   update_at: string;
+
+  @OneToMany(() => Pessoas, pessoa => pessoa.tipo_id)
+  pessoas: Pessoas[];
 }

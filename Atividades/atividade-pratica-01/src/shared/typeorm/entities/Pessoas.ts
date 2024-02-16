@@ -1,4 +1,14 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { Cidades } from './Cidades';
+import { Doacoes } from './Doacoes';
+import { TiposSanguineos } from './TiposSanguineos';
 
 @Entity('Pessoas')
 export class Pessoas {
@@ -20,15 +30,20 @@ export class Pessoas {
   @Column()
   rg: string;
 
-  @Column()
-  cidade_id: string;
+  @ManyToOne(() => Cidades)
+  @JoinColumn({ name: 'cidade_id' })
+  cidade_id: Cidades;
 
-  @Column()
-  tipo_id: string;
+  @ManyToOne(() => TiposSanguineos)
+  @JoinColumn({ name: 'tipo_id' })
+  tipo_id: TiposSanguineos;
 
   @Column()
   create_at: string;
 
   @Column()
   update_at: string;
+
+  @OneToMany(() => Doacoes, doacao => doacao.pessoa_id)
+  doacoes: Doacoes[];
 }

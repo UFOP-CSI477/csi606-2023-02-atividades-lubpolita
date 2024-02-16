@@ -1,4 +1,13 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { Cidades } from './Cidades';
+import { Doacoes } from './Doacoes';
 
 @Entity('LocaisColeta')
 export class LocaisColeta {
@@ -17,12 +26,16 @@ export class LocaisColeta {
   @Column()
   complemento: string;
 
-  @Column()
-  cidade_id: string;
+  @ManyToOne(() => Cidades)
+  @JoinColumn({ name: 'cidade_id' })
+  cidade_id: Cidades;
 
   @Column()
   create_at: string;
 
   @Column()
   update_at: string;
+
+  @OneToMany(() => Doacoes, doacao => doacao.local_id)
+  doacoes: Doacoes[];
 }

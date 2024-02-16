@@ -11,6 +11,7 @@ export class CidadesController {
   public async create(request: Request, response: Response): Promise<Response> {
     try {
       const createCidades = container.resolve(CreateCidadesService);
+      console.dir(request.body);
       const task = await createCidades.execute(request.body);
       console.dir(task);
       return response.status(201).json(task);
